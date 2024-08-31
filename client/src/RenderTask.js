@@ -5,7 +5,7 @@ export const renderTask = (task) => {
   const $taskContainer = document.createElement("div");
   $taskContainer.classList.add(
     "bg-gray-800",
-    "text-black",
+    "text-white",
     "shadow-md",
     "rounded-lg",
     "p-6",
@@ -21,7 +21,7 @@ export const renderTask = (task) => {
 
   // Título de la tarea
   const taskTitle = document.createElement("p");
-  taskTitle.classList.add("font-bold", "text-lg", "task-title");
+  taskTitle.classList.add("font-bold", "text-lg", "task-title", "text-white");
   taskTitle.textContent = task.title;
   if (task.isComplete) {
     taskTitle.style.textDecoration = "line-through";
@@ -34,7 +34,11 @@ export const renderTask = (task) => {
 
   // Descripción de la tarea
   const $taskDescription = document.createElement("p");
-  $taskDescription.classList.add("text-gray-300", "task-description");
+  $taskDescription.classList.add(
+    "text-gray-300",
+    "text-white",
+    "task-description"
+  );
   $taskDescription.textContent = task.description;
   if (task.isComplete) {
     $taskDescription.style.textDecoration = "line-through";

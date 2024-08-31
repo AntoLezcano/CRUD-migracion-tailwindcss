@@ -1,15 +1,21 @@
-import {createTask, showTask, showTaskID, editTaskID, deleteTaskID} from '../controllers/task.controllers.js';
-import {Router} from 'express';
+import {
+  createTask,
+  showTask,
+  showTaskID,
+  editTaskID,
+  deleteTaskID,
+} from "../controllers/task.controllers.js";
+import { Router } from "express";
 
 export const task = Router();
 
 //mostrar
-task.get('/tasks', showTask)
+task.get("/task", showTask);
 //buscar por id
-task.get('/tasks:id', showTaskID)
+task.get("/task:id", showTaskID);
 //ruta para crear
-task.post('/tasks', createTask)
+task.post("/task", createTask);
 //ruta editar
-task.put('/tasks:id', editTaskID)
+task.put("/task:id", editTaskID);
 //ruta para eliminar
-task.delete('/tasks:id', deleteTaskID)
+task.delete("/task:id", deleteTaskID);
